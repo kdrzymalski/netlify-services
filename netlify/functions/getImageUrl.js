@@ -1,6 +1,9 @@
 exports.handler = async (event) => {
     try {
 
+        console.log(event.body)
+        console.log(JSON.parse(event.body))
+
        const exportTask = JSON.parse(event.body).tasks.filter((task) => {
             return task.name === "export-my-file"
         })
